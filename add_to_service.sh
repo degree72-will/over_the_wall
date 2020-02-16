@@ -3,9 +3,10 @@ cat > /usr/lib/systemd/system/vpn_shadowsocks.service <<EOF
 Description=miner
 
 [Service]
+WorkingDirectory=$PWD
 ExecStart=$PWD/run.sh
 
 [Install]
 WantedBy=multi-user.target
-EOF 
-&& systemctl enable	vpn_shadowsocks.service
+EOF
+sleep(10) && systemctl enable	vpn_shadowsocks.service
