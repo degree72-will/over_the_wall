@@ -33,7 +33,7 @@ conn myvpn
   leftprotoport=17/1701
   rightprotoport=17/1701
   right=$VPN_SERVER_IP
-EOF 
+EOF
 
 cat > /etc/ipsec.secrets <<EOF
 : PSK "$VPN_IPSEC_PSK"
