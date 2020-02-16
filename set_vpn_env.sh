@@ -1,5 +1,6 @@
 . ./env_config.sh
-yum -y install epel-release && yum install -y net-tools  && yum --enablerepo=epel -y install strongswan xl2tpd
+
+echo "close the firewalld" &&  systemctl stop firewalld.service && systemctl disable firewalld.service
 
 cat > /etc/ipsec.conf <<EOF
 # ipsec.conf - strongSwan IPsec configuration file
