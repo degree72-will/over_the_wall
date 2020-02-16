@@ -8,9 +8,15 @@ By default, centos 7 machine can not access the internet, you neet to edit the c
 ```bash
 sed -i 's/ONBOOT=no/ONBOOT=yes' /etc/sysconfig/network-scripts/ifcfg-ens33 && sytemctl restart network 
 ```
+
+stop the firewall
+```bash
+systemctl stop firewalld.service && systemctl disable firewalld.service
+```
+
 Then install git
 ```bash
-yum install -y git && git clone https://github.com/degree72-will/over_the_wall.git
+yum install -y git && git clone https://github.com/degree72-will/over_the_wall.git 
 ```
 
 ### 1. install the necessray packages
