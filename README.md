@@ -26,6 +26,10 @@ sh install_package.sh
 ```
 
 ### 2. edit the vpn info in `env_config_sample` and rame it to `env_config` 
+```bash
+mv env_config_sample.sh env_config.sh
+
+```
 
 ### 3. set static ip
 ```bash
